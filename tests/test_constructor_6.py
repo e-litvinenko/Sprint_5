@@ -7,7 +7,6 @@ from pages.locators import MainPageLocators, TestData
 class TestConstructor:
     
     def test_go_to_buns_section(self, driver):
-        """6.1. Переход к разделу «Булки»"""
         driver.get(TestData.MAIN_URL)
         
         driver.find_element(*MainPageLocators.SAUCES_SECTION).click()
@@ -23,7 +22,6 @@ class TestConstructor:
         driver.quit()
     
     def test_go_to_sauces_section(self, driver):
-        """6.2. Переход к разделу «Соусы»"""
         driver.get(TestData.MAIN_URL)
         
         driver.find_element(*MainPageLocators.SAUCES_SECTION).click()
@@ -34,7 +32,6 @@ class TestConstructor:
         driver.quit()
     
     def test_go_to_toppings_section(self, driver):
-        """6.3. Переход к разделу «Начинки»"""
         driver.get(TestData.MAIN_URL)
         
         driver.find_element(*MainPageLocators.TOPPINGS_SECTION).click()
@@ -43,3 +40,4 @@ class TestConstructor:
         )
         assert toppings_tab.is_displayed()
         driver.quit()
+        

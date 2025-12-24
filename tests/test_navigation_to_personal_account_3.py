@@ -5,8 +5,6 @@ from pages.locators import MainPageLocators, LoginPageLocators, TestData
 
 
 def test_click_personal_account_button(driver):
-    """3. Проверь переход по клику на «Личный кабинет»"""
-    
     driver.get(TestData.MAIN_URL)
     
     personal_account_link = WebDriverWait(driver, 10).until(

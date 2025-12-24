@@ -46,3 +46,4 @@ pytest tests/ -v
 
 # Запустить конкретный тестовый файл
 pytest tests/test_registration_1.py 
+

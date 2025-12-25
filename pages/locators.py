@@ -1,7 +1,6 @@
 """
 Локаторы для тестов проекта Sprint_5 - Stellar Burgers
 """
-
 from selenium.webdriver.common.by import By
 
 
@@ -74,18 +73,3 @@ class PersonalAccountLocators:
     
     # Кнопки
     LOGOUT_BUTTON = (By.XPATH, "//button[text()='Выйти' or text()='Выход']")  # Кнопка выхода из аккаунта
-
-
-class TestData:
-    """Тестовые данные (для удобства хранения в одном месте)"""
-    
-    # Аккаунт для тестирования входа
-    TEST_EMAIL = "EkaterinaLitvinenko371234@yandex.ru"
-    TEST_PASSWORD = "123456"
-    TEST_NAME = "Екатерина"
-    
-    # URL
-    MAIN_URL = "https://stellarburgers.education-services.ru"
-    LOGIN_URL = "https://stellarburgers.education-services.ru/login"
-    REGISTER_URL = "https://stellarburgers.education-services.ru/register"
-    FORGOT_PASSWORD_URL = "https://stellarburgers.education-services.ru/forgot-password"

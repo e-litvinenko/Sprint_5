@@ -4,20 +4,25 @@ from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+
 @pytest.fixture
 def driver():
     driver = webdriver.Chrome()
     driver.maximize_window()
-    return driver
+    yield driver
+    driver.quit()
+
 
 @pytest.fixture
 def random_email():
     return f"test_user_37_{random.randint(100, 999)}@yandex.ru"
 
+
 @pytest.fixture
 def login():
     def _login(driver):
-        from pages.locators import TestData, LoginPageLocators, MainPageLocators
+        from pages.data import TestData
+        from pages.locators import LoginPageLocators, MainPageLocators
         
         wait = WebDriverWait(driver, 10)
         
